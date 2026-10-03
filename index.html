@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SCOTTYOLORIN — Official Site</title>
+<meta name="description" content="Official website of SCOTTYOLORIN. Lagos-based recording artist and songwriter.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" id="siteNav">
+    <div class="container-fluid px-3 px-lg-5">
+      <a class="navbar-brand brand-mark" href="#home">SCOTTYOLORIN</a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-4">
+          <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#music">MUSIC</a></li>
+          <li class="nav-item"><a class="nav-link" href="#videos">VIDEOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="#shows">SHOWS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">GALLERY</a></li>
+          <li class="nav-item"><a class="nav-link nav-cta" href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div class="hero-bg is-active" style="background-image: url('Scottyolorin main.jpg')"   aria-hidden="true"></div>
+  <div class="hero-bg"           style="background-image: url('Scottyolorinmain2.jpg')" aria-hidden="true"></div>
+  <div class="hero-bg"           style="background-image: url('Scottyolorinmain3.png')" aria-hidden="true"></div>
+  <div class="hero-bg"           style="background-image: url('Scottyolorinmain4.webp')" aria-hidden="true"></div>
+
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <div class="container hero-content">
+    <p class="hero-eyebrow">LAGOS · NIGERIA · RECORDING ARTIST</p>
+    <h1 class="hero-title">SCOTTYOLORIN</h1>
+    <p class="hero-tagline">OLORIN</p>
+
+    <div class="hero-actions">
+      <a href="#music" class="btn btn-accent">
+        <i class="bi bi-play-fill"></i> LISTEN NOW
+      </a>
+      <a href="#videos" class="btn btn-outline-light-custom">
+        <i class="bi bi-camera-video"></i> WATCH
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>SCROLL</span>
+    <i class="bi bi-arrow-down"></i>
+  </div>
+</section>
+
+<!-- ============ FEATURED RELEASE ============ -->
+<section class="section featured-release">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <img src="Baller.jpg" alt="BALLER cover art" class="featured-cover img-fluid">
+      </div>
+      <div class="col-lg-6">
+        <p class="section-eyebrow">LATEST RELEASE</p>
+        <h2 class="featured-title">BALLER</h2>
+        <p class="featured-meta">SCOTTYOLORIN 2026</p>
+
+        <div class="hero-actions mt-4">
+          <a href="https://open.spotify.com/track/5UpTDiAmanLIQEWXxw1lnB?si=dbc4be9589d94de5" class="btn btn-accent"><i class="bi bi-play-fill"></i> LISTEN NOW</a>
+          <a href="https://youtu.be/NZpXIB05Crs?si=v16kPB_VHADZsJzS" class="btn btn-outline-light-custom"><i class="bi bi-camera-video"></i> WATCH</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MUSIC ============ -->
+<section id="music" class="section">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-eyebrow">DISCOGRAPHY</p>
+      <h2 class="section-title">MUSIC</h2>
+    </header>
+
+    <div class="music-controls">
+      <div class="filter-group" id="musicFilters">
+        <button class="filter-btn is-active" data-filter="all">ALL</button>
+        <button class="filter-btn" data-filter="single">SINGLES</button>
+        <button class="filter-btn" data-filter="project">PROJECTS</button>
+        <button class="filter-btn" data-filter="feature">FEATURES</button>
+      </div>
+
+      <div class="search-wrap">
+        <i class="bi bi-search"></i>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search music..." autocomplete="off">
+      </div>
+    </div>
+
+    <div class="row g-4" id="musicGrid"></div>
+    <p id="musicEmpty" class="empty-state d-none">No releases match your search.</p>
+  </div>
+</section>
+
+<!-- ============ PROJECT FEATURE ============ -->
+<section class="section project-feature">
+  <div class="container">
+    <div class="row align-items-center g-5 flex-lg-row-reverse">
+      <div class="col-lg-6">
+        <img src="Olorin Pack.jpg" alt="OLORIN PACK cover art" class="project-cover img-fluid">
+      </div>
+      <div class="col-lg-6">
+        <p class="section-eyebrow">MAJOR PROJECT</p>
+        <h2 class="project-title">OLORIN PACK</h2>
+
+        <ul class="project-meta">
+          <li><span>YEAR</span>2026</li>
+          <li><span>TRACKS</span>12</li>
+          <li><span>TYPE</span>PROJECT</li>
+        </ul>
+
+        <a href="https://open.spotify.com/album/4sWFA2NbXUPfbvuK3rjtiQ?si=DlWJboZgSTC6ZyW14YGUew" class="btn btn-accent mt-2">
+          VIEW PROJECT <i class="bi bi-arrow-up-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEOS ============ -->
+<section id="videos" class="section">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-eyebrow">VISUALS</p>
+      <h2 class="section-title">VIDEOS</h2>
+    </header>
+
+    <div class="video-grid" id="videoGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section about">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5">
+        <img src="Scottyolorin main.jpg" alt="SCOTTYOLORIN portrait" class="about-portrait img-fluid">
+      </div>
+      <div class="col-lg-7">
+        <p class="section-eyebrow">THE ARTIST</p>
+        <h2 class="section-title">ABOUT</h2>
+
+        <p class="about-lead">
+          Scottyolorin is a genre-bending artist whose roots run deep into structured music training; between church choir rehearsals and orchestral performances, he developed a refined sense of emotion, melody and rhythm in childhood years. his sonic journey began in university with BandLab and raw curiosity. He started uploading experimental tracks to SoundCloud, where he quickly gained a following for his unique sound and innovative approach to music production.
+        </p>
+        <p class="about-body">Ayopelumi Scott</p>
+
+        <ul class="about-facts">
+          <li><span>LOCATION</span>LAGOS, NIGERIA</li>
+          <li><span>GENRES</span>HIP-HOP / AFROBEATS / ALTERNATIVE</li>
+        </ul>
+
+        <ul class="timeline">
+          <li><span class="timeline-year">2024</span><span class="timeline-text">Began experimenting with BandLab during university and uploaded his first experimental demos to SoundCloud, laying the foundation for his sound.</span></li>
+          <li><span class="timeline-year">2025</span><span class="timeline-text">Continued developing his identity, blending melodic rap, Nigerian street-hop, and alternative sounds while building connections and collaborating with other artists.</span></li>
+          <li><span class="timeline-year">2026</span><span class="timeline-text">Released his debut album "OLORIN PACK", receiving critical acclaim and expanding his audience.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOWS ============ -->
+<section id="shows" class="section">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-eyebrow">LIVE</p>
+      <h2 class="section-title">SHOWS</h2>
+    </header>
+
+    <h3 class="subsection-title">UPCOMING</h3>
+    <ul class="show-list" id="upcomingShows"></ul>
+
+    <h3 class="subsection-title mt-5">PAST SHOWS</h3>
+    <ul class="show-list show-list--past" id="pastShows"></ul>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="section">
+  <div class="container-fluid px-3 px-lg-5">
+    <header class="section-head">
+      <p class="section-eyebrow">VISUAL DIARY</p>
+      <h2 class="section-title">GALLERY</h2>
+    </header>
+
+    <div class="filter-group mb-4" id="galleryFilters">
+      <button class="filter-btn is-active" data-filter="all">ALL</button>
+      <button class="filter-btn" data-filter="live">LIVE</button>
+      <button class="filter-btn" data-filter="studio">STUDIO</button>
+      <button class="filter-btn" data-filter="fashion">FASHION</button>
+      <button class="filter-btn" data-filter="backstage">BACKSTAGE</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PRESS ============ -->
+<section class="section press">
+  <div class="container">
+    <header class="section-head">
+      <p class="section-eyebrow">MEDIA</p>
+      <h2 class="section-title">PRESS</h2>
+    </header>
+
+    <div class="row g-5">
+      <div class="col-lg-8">
+        <h3 class="subsection-title">FEATURED IN</h3>
+        <ul class="press-list">
+          <li class="press-item">
+            <span class="press-pub">The Native</span>
+            <span class="press-title">scottyolorin’s debut mixtape, ‘OLORIN PACK,’ is here</span>
+            <a href="https://thenativemag.com/scottyolorins-debut-mixtape-olorin-pack-is-here/" class="press-link">READ ARTICLE <i class="bi bi-arrow-up-right"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+        <h3 class="subsection-title">PRESS KIT</h3>
+        <a href="Scottyolorin Native.pdf.pdf" class="btn btn-accent" download>
+          DOWNLOAD EPK <i class="bi bi-download"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / BOOKING ============ -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <p class="section-eyebrow">GET IN TOUCH</p>
+        <h2 class="section-title">BOOK<br>SCOTTYOLORIN</h2>
+
+        <ul class="contact-list">
+          <li><span>MANAGEMENT</span><a href="mailto:scottyolorin@outlook.com">scottyolorin@outlook.com</a></li>
+          <li><span>BOOKINGS</span><a href="mailto:bookings@scottyolorin.com">bookings@scottyolorin.com</a></li>
+          <li><span>PRESS</span><a href="mailto:press@scottyolorin.com">press@scottyolorin.com</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-7">
+        <form id="bookingForm" class="booking-form" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label" for="fullName">Full Name *</label>
+              <input type="text" id="fullName" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="email">Email *</label>
+              <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="company">Company / Organization</label>
+              <input type="text" id="company" class="form-control">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="eventType">Event Type *</label>
+              <select id="eventType" class="form-select" required>
+                <option value="">Select...</option>
+                <option>Concert</option>
+                <option>Festival</option>
+                <option>Private Event</option>
+                <option>Brand Activation</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="eventDate">Event Date *</label>
+              <input type="date" id="eventDate" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="eventLocation">Event Location *</label>
+              <input type="text" id="eventLocation" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label" for="budget">Budget</label>
+              <input type="text" id="budget" class="form-control" placeholder="e.g. ₦5,000,000">
+            </div>
+            <div class="col-12">
+              <label class="form-label" for="message">Message *</label>
+              <textarea id="message" class="form-control" rows="4" required></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-accent w-100 w-md-auto">
+                SEND BOOKING REQUEST <i class="bi bi-arrow-right"></i>
+              </button>
+            </div>
+            <div class="col-12">
+              <p id="formFeedback" class="form-feedback d-none"></p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOCIAL ============ -->
+<section class="section social">
+  <div class="container text-center">
+    <p class="section-eyebrow">STAY CLOSE</p>
+    <h2 class="section-title">FOLLOW THE JOURNEY</h2>
+
+    <div class="social-grid">
+      <a href="https://www.instagram.com/scottyolorin00/" class="social-link" aria-label="Instagram"><i class="bi bi-instagram"></i><span>INSTAGRAM</span></a>
+      <a href="https://x.com/scottyolorin" class="social-link" aria-label="X"><i class="bi bi-twitter-x"></i><span>X</span></a>
+      <a href="https://www.tiktok.com/@scottyolorin" class="social-link" aria-label="TikTok"><i class="bi bi-tiktok"></i><span>TIKTOK</span></a>
+      <a href="https://www.youtube.com/@scottyolorin" class="social-link" aria-label="YouTube"><i class="bi bi-youtube"></i><span>YOUTUBE</span></a>
+      <a href="https://open.spotify.com/artist/3CyKLwlqtYmQxNt4cWflKx" class="social-link" aria-label="Spotify"><i class="bi bi-spotify"></i><span>SPOTIFY</span></a>
+      <a href="https://music.apple.com/ng/artist/scottyolorin/1842475980" class="social-link" aria-label="Apple Music"><i class="bi bi-apple"></i><span>APPLE MUSIC</span></a>
+      <a href="https://soundcloud.com/scott-ayopelumi" class="social-link" aria-label="SoundCloud"><i class="bi bi-soundwave"></i><span>SOUNDCLOUD</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+      <div class="col-md-4">
+        <p class="footer-brand">SCOTTYOLORIN</p>
+        <p class="footer-tag">MUSIC &bull; VISUALS &bull; WORLD</p>
+      </div>
+      <div class="col-md-4 text-md-center">
+        <div class="footer-social">
+          <a href="https://www.instagram.com/scottyolorin00/" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/scottyolorin" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.tiktok.com/@scottyolorin" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="https://www.youtube.com/@scottyolorin" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="https://open.spotify.com/artist/3CyKLwlqtYmQxNt4cWflKx" aria-label="Spotify"><i class="bi bi-spotify"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4 text-md-end">
+        <p class="footer-small">&copy; 2026 SCOTTYOLORIN. ALL RIGHTS RESERVED.</p>
+        <p class="footer-small"><a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
